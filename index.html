@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NGY Diyetisyen - Diyetisyen Nilay Göktepe Yılmaz'ın danışanları için kişisel beslenme takip uygulaması">
+    <meta name="theme-color" content="#1a5f3c">
+    <title>NGY Diyetisyen - Destek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a5f3c;
+            --color-primary-light: #2d8a5a;
+            --color-primary-dark: #0f3d26;
+            --color-accent: #f0b429;
+            --color-bg: #f8faf9;
+            --color-card: #ffffff;
+            --color-text: #1a1a2e;
+            --color-text-muted: #5a6872;
+            --color-border: #e2e8e4;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 1px 3px rgba(26, 95, 60, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 95, 60, 0.1);
+            --shadow-lg: 0 12px 40px rgba(26, 95, 60, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--color-text);
+            background: var(--color-bg);
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cards Section */
+        .cards-section {
+            margin-top: -50px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: var(--color-card);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .card h2 {
+            color: var(--color-text);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        /* Contact Info */
+        .contact-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 20px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-item:hover {
+            background: #eef3f0;
+        }
+
+        .contact-item-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--shadow-sm);
+            flex-shrink: 0;
+        }
+
+        .contact-item-content {
+            flex: 1;
+        }
+
+        .contact-item-label {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .contact-item-value {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .contact-item-value a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item-value a:hover {
+            color: var(--color-primary-light);
+            text-decoration: underline;
+        }
+
+        /* FAQ */
+        .faq-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .faq-item {
+            padding: 20px 24px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Features List */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+        }
+
+        .feature-item-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .feature-item-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 4px;
+        }
+
+        .feature-item-content p {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+        }
+
+        /* Links */
+        .links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: var(--color-bg);
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--color-border);
+        }
+
+        .link-button:hover {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .link-button span {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--color-card);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 16px 80px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .links-list {
+                flex-direction: column;
+            }
+
+            .link-button {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="lang-switch">
+            <a href="index.html" class="lang-btn active">TR</a>
+            <a href="index-en.html" class="lang-btn">EN</a>
+        </div>
+        <div class="hero-content">
+            <div class="hero-icon">🥗</div>
+            <h1>NGY Diyetisyen</h1>
+            <p class="hero-subtitle">Destek ve İletişim</p>
+        </div>
+    </header>
+
+    <main class="cards-section">
+        <div class="container">
+            <!-- Contact Card -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-icon">📞</div>
+                    <h2>İletişim Bilgileri</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📧</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">E-posta</div>
+                            <div class="contact-item-value">
+                                <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📱</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">Telefon</div>
+                            <div class="contact-item-value">
+                                <a href="tel:+905332844333">0533 284 43 33</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">Adres</div>
+                            <div class="contact-item-value">Cubes Plaza, B Blok No:208, Çukurambar, Öğretmenler Cd. No:6, 06510 Çankaya/Ankara</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Card -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-icon">❓</div>
+                    <h2>Sık Sorulan Sorular</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Uygulamaya nasıl kayıt olabilirim?</h3>
+                        <p>NGY Diyetisyen uygulaması yalnızca kayıtlı danışanlar tarafından kullanılabilir. Kayıt olmak için lütfen diyetisyeniniz ile iletişime geçin.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Şifremi unuttum, ne yapmalıyım?</h3>
+                        <p>Giriş ekranında "Şifremi Unuttum" bağlantısına tıklayarak e-posta adresinize şifre sıfırlama bağlantısı alabilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Öğün fotoğrafı nasıl yükleyebilirim?</h3>
+                        <p>Ana menüden "Öğünler" bölümüne girin ve kamera simgesine dokunarak fotoğraf çekebilir veya galerinizden fotoğraf seçebilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Randevu nasıl alabilirim?</h3>
+                        <p>"Randevular" bölümünden müsait zaman dilimlerini görebilir ve uygun olan bir zamanı seçerek randevu oluşturabilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Uygulama ücretsiz mi?</h3>
+                        <p>Evet, uygulama ücretsizdir. Diyetisyenlik hizmet ücretleri ayrıca belirlenir.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Verilerim güvende mi?</h3>
+                        <p>Evet, tüm verileriniz şifreli olarak güvenli sunucularda saklanır ve üçüncü taraflarla paylaşılmaz. Detaylı bilgi için <a href="privacy-policy.html">Gizlilik Politikamızı</a> inceleyebilirsiniz.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Card -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-icon">📲</div>
+                    <h2>Uygulama Özellikleri</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-item-icon">📅</div>
+                        <div class="feature-item-content">
+                            <h4>Randevu Yönetimi</h4>
+                            <p>Kolayca randevu alın ve takip edin</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🥗</div>
+                        <div class="feature-item-content">
+                            <h4>Diyet Planları</h4>
+                            <p>Kişisel beslenme programınıza erişin</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">📸</div>
+                        <div class="feature-item-content">
+                            <h4>Öğün Takibi</h4>
+                            <p>Yediğiniz öğünlerin fotoğraflarını paylaşın</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">📊</div>
+                        <div class="feature-item-content">
+                            <h4>Ölçüm Takibi</h4>
+                            <p>İlerlemenizi kaydedin ve takip edin</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">💬</div>
+                        <div class="feature-item-content">
+                            <h4>Mesajlaşma</h4>
+                            <p>Diyetisyeninizle iletişim kurun</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🔔</div>
+                        <div class="feature-item-content">
+                            <h4>Bildirimler</h4>
+                            <p>Önemli hatırlatmalar alın</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links Card -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-icon">🔗</div>
+                    <h2>Faydalı Bağlantılar</h2>
+                </div>
+                <div class="links-list">
+                    <a href="privacy-policy.html" class="link-button">
+                        <span>🔒</span> Gizlilik Politikası
+                    </a>
+                    <a href="terms-of-service.html" class="link-button">
+                        <span>📋</span> Kullanım Koşulları
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Diyetisyen Nilay Göktepe Yılmaz. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NGY Diyetisyen - KVKK Aydınlatma Metni ve Gizlilik Politikası">
+    <meta name="theme-color" content="#1a5f3c">
+    <title>NGY Diyetisyen - KVKK Aydınlatma Metni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a5f3c;
+            --color-primary-light: #2d8a5a;
+            --color-primary-dark: #0f3d26;
+            --color-bg: #f8faf9;
+            --color-card: #ffffff;
+            --color-text: #1a1a2e;
+            --color-text-muted: #5a6872;
+            --color-border: #e2e8e4;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-md: 0 4px 20px rgba(26, 95, 60, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--color-text);
+            background: var(--color-bg);
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            margin-top: -40px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-card {
+            background: var(--color-card);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            padding: 24px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+
+        li strong {
+            color: var(--color-primary-dark);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .important-box {
+            background: #fff8e6;
+            border: 1px solid #f0b429;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin: 20px 0;
+        }
+
+        .important-box strong {
+            color: #b8860b;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 32px;
+            color: #fff;
+        }
+
+        .contact-box strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--color-card);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        .document-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--color-primary);
+        }
+
+        .document-section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .section-title {
+            background: var(--color-primary);
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 1.4rem;
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 8px 0 0 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 70px 16px 60px;
+            }
+
+            .back-link {
+                top: auto;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .content-card {
+                padding: 28px 20px;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <a href="index.html" class="back-link">← Ana Sayfa</a>
+        <div class="lang-switch">
+            <a href="privacy-policy.html" class="lang-btn active">TR</a>
+            <a href="privacy-policy-en.html" class="lang-btn">EN</a>
+        </div>
+        <div class="hero-content">
+            <h1>🔒 KVKK Aydınlatma Metni</h1>
+            <p class="hero-subtitle">NGY Diyetisyen</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            <article class="content-card">
+                <!-- KVKK AYDINLATMA METNİ -->
+                <div class="section-title">
+                    <h2>NGY APP – KVKK AYDINLATMA METNİ</h2>
+                    <p>Sürüm: 1.0 | Son güncelleme: 13.01.2026</p>
+                </div>
+
+                <div class="intro">
+                    Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında "aydınlatma yükümlülüğü"nü yerine getirmek amacıyla hazırlanmıştır. İşbu metin, tek başına "açık rıza" değildir.
+                </div>
+
+                <h2>1) Veri Sorumlusu</h2>
+                <p><strong>Veri Sorumlusu:</strong> Diyetisyen Nilay Göktepe Yılmaz</p>
+                <p><strong>Adres:</strong> Cubes Plaza, B Blok No:208, Çukurambar, Öğretmenler Cd. No:6, 06510 Çankaya/Ankara</p>
+                <p><strong>E-posta (KVKK başvuru):</strong> <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+905332844333">0533 284 43 33</a></p>
+
+                <h2>2) İşlenen Kişisel Veriler</h2>
+                <p>NGY App'i kullanmanız kapsamında aşağıdaki kişisel veriler işlenebilir:</p>
+
+                <h3>A) Hesap / Üyelik Verileri</h3>
+                <ul>
+                    <li>Giriş/oturum bilgileri, kullanıcı hesabı bilgileri, kullanıcı kimliği</li>
+                </ul>
+
+                <h3>B) Kimlik ve İletişim (kullanıcı tarafından sağlanırsa)</h3>
+                <ul>
+                    <li>Ad-soyad (varsa), e-posta, telefon (varsa)</li>
+                </ul>
+
+                <h3>C) Profil / Demografik Bilgiler (kullanıcı tarafından girilir)</h3>
+                <ul>
+                    <li>Yaş, boy</li>
+                </ul>
+
+                <h3>D) Takip Verileri (kullanıcı tarafından girilir)</h3>
+                <ul>
+                    <li>Ölçüm bilgileri (örn. kilo/beden ölçüsü vb. – kullanıcı girişine bağlı)</li>
+                    <li>Günlük su tüketimi</li>
+                    <li>Günlük adım sayısı</li>
+                </ul>
+
+                <h3>E) İçerik Verileri</h3>
+                <ul>
+                    <li>Öğün fotoğrafları (kamera/galeriden seçilerek yüklenir)</li>
+                    <li>Fotoğraflara ilişkin açıklamalar / notlar</li>
+                </ul>
+
+                <h3>F) Mesajlaşma (Chat) Verileri</h3>
+                <ul>
+                    <li>Kullanıcı–diyetisyen mesaj içerikleri</li>
+                    <li>Mesajlarla paylaşılan görseller (örn. öğün fotoğrafları) ve ek açıklamalar</li>
+                </ul>
+
+                <h3>G) Bildirim Verileri</h3>
+                <ul>
+                    <li>Push bildirim gönderebilmek için cihaz bildirim belirteci (FCM token) ve bildirim tercihleri</li>
+                    <li>Yemek hatırlatmaları için cihaz üzerinde planlanan bildirim ayarları (lokal bildirim)</li>
+                </ul>
+
+                <div class="important-box">
+                    <strong>⚠️ Önemli Not (Özel Nitelikli Veri):</strong>
+                    <p>Yukarıdaki verilerden bazıları, içeriğine göre "sağlık verisi" niteliği taşıyabilir ve KVKK kapsamında "özel nitelikli kişisel veri" sayılabilir. Bu durumda gerekli hallerde ayrıca Açık Rıza alınır.</p>
+                </div>
+
+                <h2>3) Kişisel Verilerin İşlenme Amaçları</h2>
+                <p>Kişisel verileriniz aşağıdaki amaçlarla işlenir:</p>
+                <ul>
+                    <li>Üyelik oluşturma, giriş/oturum yönetimi ve hesabınızın yürütülmesi</li>
+                    <li>Diyet/beslenme sürecinin yürütülmesi: ölçüm ve takip kayıtlarınızın oluşturulması, görüntülenmesi ve raporlanması</li>
+                    <li>Öğün fotoğrafı yükleme ve diyetisyen tarafından değerlendirme süreçlerinin yürütülmesi</li>
+                    <li>Kullanıcı ile diyetisyen arasındaki mesajlaşma/iletişim süreçlerinin yürütülmesi</li>
+                    <li>Yemek hatırlatmalarının ve uygulama bildirimlerinin iletilmesi (push ve/veya cihaz içi planlı bildirim)</li>
+                    <li>Destek taleplerinin yönetilmesi</li>
+                    <li>Mevzuattan doğan yükümlülüklerin yerine getirilmesi ve yetkili kurum/kuruluş taleplerinin yanıtlanması</li>
+                </ul>
+
+                <h2>4) Kişisel Verilerin Toplanma Yöntemi</h2>
+                <p>Veriler;</p>
+                <ul>
+                    <li>Uygulama ekranları üzerinden kullanıcı tarafından girilmesi,</li>
+                    <li>Kamera/galeriden fotoğraf seçilerek yüklenmesi,</li>
+                    <li>Mesajlaşma (chat) fonksiyonunun kullanılması,</li>
+                    <li>Push bildirimlerin iletilmesi için cihaz bildirim belirtecinin (token) oluşması</li>
+                </ul>
+                <p>yollarıyla elektronik ortamda toplanır.</p>
+
+                <h2>5) Hukuki Sebepler</h2>
+                <p>Kişisel verileriniz KVKK'da öngörülen işleme şartlarına dayanılarak işlenir.</p>
+                <ul>
+                    <li><strong>Özel nitelikli olmayan kişisel veriler</strong> (örn. yaş, boy, su tüketimi, adım sayısı, hesap verileri): hizmetin sunulması için gerekli olması, hukuki yükümlülükler ve meşru menfaat gibi KVKK'daki işleme şartlarına dayanabilir.</li>
+                    <li><strong>Özel nitelikli kişisel veriler</strong> (örn. sağlık niteliği taşıyabilecek ölçüm bilgileri ve chat içerikleri): KVKK'da öngörülen şartlar kapsamında işlenir; gerekli hallerde Açık Rıza alınır.</li>
+                </ul>
+
+                <h2>6) Kişisel Verilerin Aktarılması (Yurt İçi)</h2>
+                <p>Kişisel verileriniz;</p>
+                <ul>
+                    <li>Hizmetin sunulması kapsamında Veri Sorumlusu olan diyetisyen tarafından görüntülenir ve yönetilir.</li>
+                    <li>Yetkili kamu kurum ve kuruluşlarının talebi halinde, yalnızca talep ile sınırlı olacak şekilde ilgili kurum/kuruluşlarla paylaşılabilir.</li>
+                </ul>
+
+                <h2>7) Hizmet Sağlayıcılar (Firebase/Google) ve Veri İşleyenler</h2>
+                <p>Uygulama altyapısında Google Firebase hizmetleri kullanılmaktadır:</p>
+                <ul>
+                    <li><strong>Kimlik doğrulama/oturum:</strong> Firebase Authentication</li>
+                    <li><strong>Veritabanı:</strong> Firebase Firestore</li>
+                    <li><strong>Görsel depolama:</strong> Firebase Storage</li>
+                    <li><strong>Push bildirim altyapısı:</strong> Firebase Cloud Messaging (FCM)</li>
+                </ul>
+                <p>Bu kapsamda kişisel verileriniz, ilgili hizmetlerin sağlanması amacıyla hizmet sağlayıcı altyapısında işlenebilir.</p>
+                <p>iOS cihazlarda push bildirimlerin iletilmesi sürecinde Apple push altyapısı (APNs) da teknik olarak devreye girebilir. Android cihazlarda bildirim iletimi süreçlerinde ilgili işletim sistemi / servis altyapıları kullanılabilir.</p>
+                <p>Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+                <h2>8) Kişisel Verilerin Yurt Dışına Aktarılması</h2>
+                <p>Bulut altyapısı ve bildirim hizmetleri nedeniyle kişisel verileriniz yurt dışındaki sunucularda saklanabilir ve/veya işlenebilir. Yurt dışına aktarım süreçleri, KVKK'nın yurt dışına aktarım hükümlerine uygun şekilde yürütülür.</p>
+
+                <h2>9) Saklama Süreleri</h2>
+                <p>Kişisel verileriniz;</p>
+                <ul>
+                    <li>Hesabınız aktif olduğu sürece,</li>
+                    <li>Hizmetin sunulması için gerekli süre boyunca,</li>
+                    <li>Hukuki yükümlülükler ve olası uyuşmazlıklarda hakların tesisi/kullanılması/korunması için gerekli sürelerle sınırlı olarak</li>
+                </ul>
+                <p>saklanır; süre sonunda silinir, yok edilir veya anonim hale getirilir.</p>
+
+                <h2>10) İlgili Kişi Hakları (KVKK m.11)</h2>
+                <p>KVKK kapsamında veri sorumlusuna başvurarak;</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+                    <li>İşlenmişse bilgi talep etme,</li>
+                    <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme,</li>
+                    <li>Yurt içinde/yurt dışında aktarım yapılan üçüncü kişileri bilme,</li>
+                    <li>Eksik/yanlış işlenmişse düzeltilmesini isteme,</li>
+                    <li>KVKK'da öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+                    <li>Düzeltme/silme/yok edilme işlemlerinin aktarım yapılan üçüncü kişilere bildirilmesini isteme,</li>
+                    <li>Münhasıran otomatik sistemler ile analiz edilmesi sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+                    <li>Kanuna aykırı işleme nedeniyle zarara uğramanız halinde zararın giderilmesini talep etme</li>
+                </ul>
+                <p>haklarına sahipsiniz.</p>
+
+                <h2>11) Başvuru Yöntemi</h2>
+                <p>KVKK kapsamındaki taleplerinizi aşağıdaki kanallardan iletebilirsiniz:</p>
+                <div class="contact-box">
+                    <strong>Diyetisyen Nilay Göktepe Yılmaz</strong>
+                    <p>📧 E-posta (KVKK başvuru): <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+                    <p>📍 Adres: Cubes Plaza, B Blok No:208, Çukurambar, Öğretmenler Cd. No:6, 06510 Çankaya/Ankara</p>
+                </div>
+                <p style="margin-top: 16px;">Başvurular, talebin niteliğine göre en kısa sürede ve en geç 30 gün içinde sonuçlandırılır.</p>
+
+                <h2>12) Değişiklikler</h2>
+                <p>Bu metin, ihtiyaç halinde güncellenebilir. Güncel metin uygulama içinde yayınlanır.</p>
+
+                <!-- AÇIK RIZA METNİ -->
+                <div class="document-section">
+                    <div class="section-title">
+                        <h2>NGY APP – ÖZEL NİTELİKLİ KİŞİSEL VERİLER İÇİN AÇIK RIZA METNİ</h2>
+                        <p>Sürüm: 1.0 | Son güncelleme: 13.01.2026</p>
+                    </div>
+
+                    <p><strong>Veri Sorumlusu:</strong> Diyetisyen Nilay Göktepe Yılmaz</p>
+                    <p><strong>Adres:</strong> Cubes Plaza, B Blok No:208, Çukurambar, Öğretmenler Cd. No:6, 06510 Çankaya/Ankara</p>
+                    <p><strong>E-posta (KVKK başvuru):</strong> <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+
+                    <div class="intro" style="margin-top: 24px;">
+                        KVKK Aydınlatma Metni'ni okudum ve anladım.
+                    </div>
+
+                    <p>NGY App kapsamında, benim tarafımdan uygulamaya girilen ve/veya uygulama içi mesajlaşmalarda (chat) paylaşılan;</p>
+                    <ul>
+                        <li>ölçüm bilgilerimin (örn. kilo/beden ölçüsü vb.),</li>
+                        <li>günlük su tüketimi ve günlük adım sayısı bilgilerimin,</li>
+                        <li>öğün fotoğraflarımın ve açıklamalarımın,</li>
+                        <li>diyetisyenim ile yaptığım mesajlaşma içeriklerinin (sağlık niteliği taşıyabilecek bilgiler dahil)</li>
+                    </ul>
+                    <p>diyet/beslenme sürecinin yürütülmesi, takip edilmesi, raporlanması ve diyetisyen tarafından değerlendirme/danışmanlık hizmetinin sunulması amaçlarıyla işlenmesine açık rıza verilebilir.</p>
+
+                    <p>Bu verilerin, hizmetin sunulması kapsamında diyetisyen tarafından görüntülenebileceği; bulut altyapısı (Firebase) üzerinde saklanabileceği ve işlenebileceği bilinmelidir.</p>
+
+                    <p><strong>Açık rıza dilediğiniz zaman geri alınabilir</strong> (geri alma öncesindeki işlemleri etkilemeksizin).</p>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Diyetisyen Nilay Göktepe Yılmaz. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

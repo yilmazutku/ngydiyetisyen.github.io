@@ -1,0 +1,61 @@
+# NGY Diyetisyen - GitHub Pages Configuration
+# This file configures Jekyll for GitHub Pages deployment
+
+# Site settings
+title: NGY Diyetisyen
+description: Diyetisyen Nilay Göktepe Yılmaz'ın danışanları için kişisel beslenme takip uygulaması. Support and privacy policy pages for App Store submission.
+author: Nilay Göktepe Yılmaz
+email: destek@ngydiyetisyen.com
+
+# URL settings
+# IMPORTANT: Update 'baseurl' and 'url' after creating your GitHub repository
+# 
+# Option 1: User/Organization site (username.github.io)
+#   url: "https://username.github.io"
+#   baseurl: ""
+#
+# Option 2: Project site (username.github.io/repo-name)
+#   url: "https://username.github.io"
+#   baseurl: "/ngy-support"  # or your repo name
+
+url: ""  # Update with your GitHub Pages URL
+baseurl: ""  # Leave empty for user site, or add /repo-name for project site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Theme (optional - we're using custom HTML, but this is needed for Jekyll)
+# theme: minima
+
+# Exclude from build
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+
+# Include files
+include:
+  - index.html
+  - index-en.html
+  - privacy-policy.html
+  - privacy-policy-en.html
+  - terms-of-service.html
+  - terms-of-service-en.html
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-seo-tag
+
+# SEO settings
+twitter:
+  card: summary
+
+# Language settings
+lang: tr
+
+# Timezone
+timezone: Europe/Istanbul
+

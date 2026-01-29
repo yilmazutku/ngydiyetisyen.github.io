@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NGY Dietitian - KVKK Information Notice and Privacy Policy">
+    <meta name="theme-color" content="#1a5f3c">
+    <title>NGY Dietitian - Privacy Policy (KVKK)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a5f3c;
+            --color-primary-light: #2d8a5a;
+            --color-primary-dark: #0f3d26;
+            --color-bg: #f8faf9;
+            --color-card: #ffffff;
+            --color-text: #1a1a2e;
+            --color-text-muted: #5a6872;
+            --color-border: #e2e8e4;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-md: 0 4px 20px rgba(26, 95, 60, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--color-text);
+            background: var(--color-bg);
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            margin-top: -40px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-card {
+            background: var(--color-card);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            padding: 24px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+
+        li strong {
+            color: var(--color-primary-dark);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .important-box {
+            background: #fff8e6;
+            border: 1px solid #f0b429;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin: 20px 0;
+        }
+
+        .important-box strong {
+            color: #b8860b;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 32px;
+            color: #fff;
+        }
+
+        .contact-box strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--color-card);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        .document-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--color-primary);
+        }
+
+        .section-title {
+            background: var(--color-primary);
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 1.4rem;
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 8px 0 0 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 70px 16px 60px;
+            }
+
+            .back-link {
+                top: auto;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .content-card {
+                padding: 28px 20px;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <a href="index-en.html" class="back-link">← Home</a>
+        <div class="lang-switch">
+            <a href="privacy-policy.html" class="lang-btn">TR</a>
+            <a href="privacy-policy-en.html" class="lang-btn active">EN</a>
+        </div>
+        <div class="hero-content">
+            <h1>🔒 Privacy Policy (KVKK)</h1>
+            <p class="hero-subtitle">NGY Dietitian</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            <article class="content-card">
+                <!-- KVKK INFORMATION NOTICE -->
+                <div class="section-title">
+                    <h2>NGY APP – KVKK INFORMATION NOTICE</h2>
+                    <p>Version: 1.0 | Last updated: January 13, 2026</p>
+                </div>
+
+                <div class="intro">
+                    This notice has been prepared to fulfill the "disclosure obligation" under Turkish Personal Data Protection Law No. 6698 ("KVKK"). This notice alone does not constitute "explicit consent."
+                </div>
+
+                <h2>1) Data Controller</h2>
+                <p><strong>Data Controller:</strong> Dietitian Nilay Göktepe Yılmaz</p>
+                <p><strong>Address:</strong> Cubes Plaza, B Block No:208, Çukurambar, Öğretmenler St. No:6, 06510 Çankaya/Ankara, Turkey</p>
+                <p><strong>Email (KVKK applications):</strong> <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+905332844333">0533 284 43 33</a></p>
+
+                <h2>2) Personal Data Processed</h2>
+                <p>The following personal data may be processed when using the NGY App:</p>
+
+                <h3>A) Account / Membership Data</h3>
+                <ul>
+                    <li>Login/session information, user account information, user ID</li>
+                </ul>
+
+                <h3>B) Identity and Contact Information (if provided by user)</h3>
+                <ul>
+                    <li>Name-surname (if any), email, phone (if any)</li>
+                </ul>
+
+                <h3>C) Profile / Demographic Information (entered by user)</h3>
+                <ul>
+                    <li>Age, height</li>
+                </ul>
+
+                <h3>D) Tracking Data (entered by user)</h3>
+                <ul>
+                    <li>Measurement information (e.g., weight/body measurements – based on user input)</li>
+                    <li>Daily water consumption</li>
+                    <li>Daily step count</li>
+                </ul>
+
+                <h3>E) Content Data</h3>
+                <ul>
+                    <li>Meal photos (uploaded by selecting from camera/gallery)</li>
+                    <li>Descriptions/notes related to photos</li>
+                </ul>
+
+                <h3>F) Messaging (Chat) Data</h3>
+                <ul>
+                    <li>User-dietitian message content</li>
+                    <li>Images shared in messages (e.g., meal photos) and additional descriptions</li>
+                </ul>
+
+                <h3>G) Notification Data</h3>
+                <ul>
+                    <li>Device notification token (FCM token) and notification preferences for sending push notifications</li>
+                    <li>Notification settings scheduled on device for meal reminders (local notifications)</li>
+                </ul>
+
+                <div class="important-box">
+                    <strong>⚠️ Important Note (Special Category Data):</strong>
+                    <p>Some of the above data may qualify as "health data" depending on its content and may be considered "special category personal data" under KVKK. In such cases, separate Explicit Consent is obtained when necessary.</p>
+                </div>
+
+                <h2>3) Purposes of Processing Personal Data</h2>
+                <p>Your personal data is processed for the following purposes:</p>
+                <ul>
+                    <li>Creating membership, login/session management, and managing your account</li>
+                    <li>Managing the diet/nutrition process: creating, viewing, and reporting your measurement and tracking records</li>
+                    <li>Managing the meal photo upload and evaluation processes by the dietitian</li>
+                    <li>Managing messaging/communication processes between user and dietitian</li>
+                    <li>Delivering meal reminders and application notifications (push and/or device-scheduled notifications)</li>
+                    <li>Managing support requests</li>
+                    <li>Fulfilling obligations arising from legislation and responding to requests from authorized institutions/organizations</li>
+                </ul>
+
+                <h2>4) Method of Collecting Personal Data</h2>
+                <p>Data is collected electronically through:</p>
+                <ul>
+                    <li>Entry by the user through application screens,</li>
+                    <li>Uploading by selecting photos from camera/gallery,</li>
+                    <li>Using the messaging (chat) function,</li>
+                    <li>Generation of device notification token for delivering push notifications</li>
+                </ul>
+
+                <h2>5) Legal Grounds</h2>
+                <p>Your personal data is processed based on the processing conditions stipulated in KVKK.</p>
+                <ul>
+                    <li><strong>Non-special category personal data</strong> (e.g., age, height, water consumption, step count, account data): may be based on processing conditions in KVKK such as being necessary for service provision, legal obligations, and legitimate interest.</li>
+                    <li><strong>Special category personal data</strong> (e.g., measurement information and chat content that may be health-related): processed under the conditions stipulated in KVKK; Explicit Consent is obtained when necessary.</li>
+                </ul>
+
+                <h2>6) Transfer of Personal Data (Domestic)</h2>
+                <p>Your personal data;</p>
+                <ul>
+                    <li>Is viewed and managed by the dietitian who is the Data Controller within the scope of service provision.</li>
+                    <li>May be shared with relevant institutions/organizations only to the extent of the request, upon request by authorized public institutions and organizations.</li>
+                </ul>
+
+                <h2>7) Service Providers (Firebase/Google) and Data Processors</h2>
+                <p>Google Firebase services are used in the application infrastructure:</p>
+                <ul>
+                    <li><strong>Authentication/session:</strong> Firebase Authentication</li>
+                    <li><strong>Database:</strong> Firebase Firestore</li>
+                    <li><strong>Image storage:</strong> Firebase Storage</li>
+                    <li><strong>Push notification infrastructure:</strong> Firebase Cloud Messaging (FCM)</li>
+                </ul>
+                <p>In this context, your personal data may be processed in the service provider infrastructure for the provision of relevant services.</p>
+                <p>On iOS devices, Apple push infrastructure (APNs) may technically be involved in the push notification delivery process. On Android devices, relevant operating system/service infrastructures may be used in notification delivery processes.</p>
+                <p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+                <h2>8) Transfer of Personal Data Abroad</h2>
+                <p>Due to cloud infrastructure and notification services, your personal data may be stored and/or processed on servers abroad. Transfer abroad processes are carried out in accordance with KVKK's provisions on transfer abroad.</p>
+
+                <h2>9) Retention Periods</h2>
+                <p>Your personal data is retained;</p>
+                <ul>
+                    <li>As long as your account is active,</li>
+                    <li>For the period necessary for service provision,</li>
+                    <li>Limited to the periods necessary for legal obligations and establishment/exercise/protection of rights in possible disputes</li>
+                </ul>
+                <p>and is deleted, destroyed, or anonymized at the end of the period.</p>
+
+                <h2>10) Data Subject Rights (KVKK Article 11)</h2>
+                <p>Under KVKK, you have the right to apply to the data controller and;</p>
+                <ul>
+                    <li>Learn whether your personal data is being processed,</li>
+                    <li>Request information if it has been processed,</li>
+                    <li>Learn the purpose of processing and whether it is used in accordance with its purpose,</li>
+                    <li>Know the third parties to whom it is transferred domestically/abroad,</li>
+                    <li>Request correction if it has been incompletely/incorrectly processed,</li>
+                    <li>Request its deletion or destruction under the conditions stipulated in KVKK,</li>
+                    <li>Request notification of correction/deletion/destruction operations to third parties to whom it has been transferred,</li>
+                    <li>Object to the emergence of a result against you by analyzing exclusively through automated systems,</li>
+                    <li>Demand compensation for damages if you suffer damage due to unlawful processing</li>
+                </ul>
+
+                <h2>11) Application Method</h2>
+                <p>You can submit your requests under KVKK through the following channels:</p>
+                <div class="contact-box">
+                    <strong>Dietitian Nilay Göktepe Yılmaz</strong>
+                    <p>📧 Email (KVKK applications): <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+                    <p>📍 Address: Cubes Plaza, B Block No:208, Çukurambar, Öğretmenler St. No:6, 06510 Çankaya/Ankara, Turkey</p>
+                </div>
+                <p style="margin-top: 16px;">Applications are concluded as soon as possible and within 30 days at the latest, depending on the nature of the request.</p>
+
+                <h2>12) Changes</h2>
+                <p>This notice may be updated as needed. The current version is published within the application.</p>
+
+                <!-- EXPLICIT CONSENT TEXT -->
+                <div class="document-section">
+                    <div class="section-title">
+                        <h2>NGY APP – EXPLICIT CONSENT FOR SPECIAL CATEGORY PERSONAL DATA</h2>
+                        <p>Version: 1.0 | Last updated: January 13, 2026</p>
+                    </div>
+
+                    <p><strong>Data Controller:</strong> Dietitian Nilay Göktepe Yılmaz</p>
+                    <p><strong>Address:</strong> Cubes Plaza, B Block No:208, Çukurambar, Öğretmenler St. No:6, 06510 Çankaya/Ankara, Turkey</p>
+                    <p><strong>Email (KVKK applications):</strong> <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+
+                    <div class="intro" style="margin-top: 24px;">
+                        I have read and understood the KVKK Information Notice.
+                    </div>
+
+                    <p>Within the scope of NGY App, for the data entered by me into the application and/or shared in in-app messaging (chat);</p>
+                    <ul>
+                        <li>my measurement information (e.g., weight/body measurements),</li>
+                        <li>my daily water consumption and daily step count information,</li>
+                        <li>my meal photos and descriptions,</li>
+                        <li>my messaging content with my dietitian (including information that may be health-related)</li>
+                    </ul>
+                    <p>explicit consent may be given for processing for the purposes of managing, tracking, reporting the diet/nutrition process and providing evaluation/consultation services by the dietitian.</p>
+
+                    <p>It should be known that this data may be viewed by the dietitian within the scope of service provision; may be stored and processed on cloud infrastructure (Firebase).</p>
+
+                    <p><strong>Explicit consent may be withdrawn at any time</strong> (without affecting the processing prior to withdrawal).</p>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Dietitian Nilay Göktepe Yılmaz. All rights reserved.</p>
+    </footer>
+</body>
+</html>

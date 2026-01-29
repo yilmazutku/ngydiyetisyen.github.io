@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NGY Diyetisyen - Kullanım Koşulları">
+    <meta name="theme-color" content="#1a5f3c">
+    <title>NGY Diyetisyen - Kullanım Koşulları</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a5f3c;
+            --color-primary-light: #2d8a5a;
+            --color-primary-dark: #0f3d26;
+            --color-bg: #f8faf9;
+            --color-card: #ffffff;
+            --color-text: #1a1a2e;
+            --color-text-muted: #5a6872;
+            --color-border: #e2e8e4;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-md: 0 4px 20px rgba(26, 95, 60, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--color-text);
+            background: var(--color-bg);
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            margin-top: -40px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-card {
+            background: var(--color-card);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            padding: 24px;
+            background: var(--color-bg);
+            border-radius: var(--radius-md);
+            margin-bottom: 32px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+
+        li strong {
+            color: var(--color-primary-dark);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .important-box {
+            background: #fff8e6;
+            border: 1px solid #f0b429;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+        }
+
+        .important-box strong {
+            color: #b8860b;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .important-box ul {
+            margin-bottom: 0;
+        }
+
+        .important-box li {
+            color: #5a5a5a;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin-top: 32px;
+            color: #fff;
+        }
+
+        .contact-box strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--color-card);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 70px 16px 60px;
+            }
+
+            .back-link {
+                top: auto;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .content-card {
+                padding: 28px 20px;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <a href="index.html" class="back-link">← Ana Sayfa</a>
+        <div class="lang-switch">
+            <a href="terms-of-service.html" class="lang-btn active">TR</a>
+            <a href="terms-of-service-en.html" class="lang-btn">EN</a>
+        </div>
+        <div class="hero-content">
+            <h1>📋 Kullanım Koşulları</h1>
+            <p class="hero-subtitle">NGY Diyetisyen</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            <article class="content-card">
+                <p class="last-updated"><strong>Son Güncelleme:</strong> Ocak 2026</p>
+
+                <div class="intro">
+                    Bu Kullanım Koşulları ("Koşullar"), NGY Diyetisyen mobil uygulamasının ("Uygulama") kullanımını düzenlemektedir. Uygulamayı kullanarak bu koşulları kabul etmiş sayılırsınız.
+                </div>
+
+                <h2>1. Hizmet Tanımı</h2>
+                <p>NGY Diyetisyen, Diyetisyen Nilay Göktepe Yılmaz tarafından sunulan bir mobil uygulamadır. Uygulama aşağıdaki hizmetleri sağlar:</p>
+                <ul>
+                    <li>Randevu yönetimi</li>
+                    <li>Kişiselleştirilmiş diyet planları</li>
+                    <li>Öğün takibi ve fotoğraf paylaşımı</li>
+                    <li>Ölçüm takibi</li>
+                    <li>Diyetisyen ile mesajlaşma</li>
+                    <li>Ödeme takibi</li>
+                    <li>Bildirimler ve duyurular</li>
+                </ul>
+
+                <h2>2. Kullanıcı Uygunluğu</h2>
+                <ul>
+                    <li>Bu Uygulama yalnızca Diyetisyen Nilay Göktepe Yılmaz'ın kayıtlı danışanları tarafından kullanılabilir.</li>
+                    <li>Uygulamayı kullanmak için 18 yaşından büyük olmanız gerekmektedir.</li>
+                    <li>Hesap oluşturmak için diyetisyeniniz tarafından sisteme kaydedilmeniz gerekmektedir.</li>
+                </ul>
+
+                <h2>3. Hesap Güvenliği</h2>
+                <p>Kullanıcı olarak:</p>
+                <ul>
+                    <li>Giriş bilgilerinizi gizli tutmaktan sorumlusunuz</li>
+                    <li>Hesabınızla gerçekleştirilen tüm işlemlerden sorumlusunuz</li>
+                    <li>Yetkisiz erişim fark etmeniz halinde derhal bize bildirmeniz gerekmektedir</li>
+                    <li>Hesabınızı başkalarıyla paylaşmamalısınız</li>
+                </ul>
+
+                <h2>4. Kabul Edilebilir Kullanım</h2>
+                <p>Uygulamayı kullanırken aşağıdakileri yapmamalısınız:</p>
+                <ul>
+                    <li>Yasalara aykırı içerik paylaşmak</li>
+                    <li>Başkalarının haklarını ihlal etmek</li>
+                    <li>Uygulamanın güvenliğini tehlikeye atacak eylemler</li>
+                    <li>Yanıltıcı veya yanlış bilgi sağlamak</li>
+                    <li>Uygulamayı kötüye kullanmak veya manipüle etmek</li>
+                    <li>Uygulamayı tersine mühendislik yapmak veya kaynak kodunu çıkarmaya çalışmak</li>
+                </ul>
+
+                <h2>5. Sağlık Bilgileri Feragatnamesi</h2>
+                <div class="important-box">
+                    <strong>⚠️ ÖNEMLİ:</strong>
+                    <ul>
+                        <li>Bu uygulama genel sağlık tavsiyesi sağlamak için tasarlanmıştır.</li>
+                        <li>Uygulama üzerinden verilen diyet programları ve tavsiyeler, yüz yüze danışmanlık hizmetinin bir tamamlayıcısıdır.</li>
+                        <li>Acil sağlık durumlarında Uygulamayı kullanmayın, profesyonel tıbbi yardım alın.</li>
+                        <li>Uygulama, tıbbi teşhis veya tedavinin yerini almaz.</li>
+                        <li>Herhangi bir sağlık sorununuz varsa, diyet programınızı uygulamadan önce doktorunuza danışın.</li>
+                    </ul>
+                </div>
+
+                <h2>6. Fikri Mülkiyet</h2>
+                <ul>
+                    <li>Uygulama ve içeriği, Diyetisyen Nilay Göktepe Yılmaz'a aittir.</li>
+                    <li>Uygulama içeriğini kopyalamak, dağıtmak veya değiştirmek yasaktır.</li>
+                    <li>Size sağlanan diyet planları kişisel kullanım içindir ve paylaşılamaz.</li>
+                </ul>
+
+                <h2>7. Gizlilik</h2>
+                <p>Kişisel verilerinizin toplanması ve kullanılması <a href="privacy-policy.html">Gizlilik Politikamıza</a> tabidir. Uygulamayı kullanarak Gizlilik Politikamızı da kabul etmiş olursunuz.</p>
+
+                <h2>8. Ödeme Koşulları</h2>
+                <ul>
+                    <li>Uygulama ücretsiz olarak sunulmaktadır.</li>
+                    <li>Diyetisyenlik hizmet ücretleri ayrıca belirlenir ve uygulama dışında tahsil edilir.</li>
+                    <li>Uygulama içindeki ödeme takibi bilgi amaçlıdır.</li>
+                </ul>
+
+                <h2>9. Hizmet Değişiklikleri</h2>
+                <ul>
+                    <li>Uygulamanın özelliklerini önceden bildirimde bulunmaksızın değiştirebilir veya kaldırabiliriz.</li>
+                    <li>Uygulamayı geçici veya kalıcı olarak askıya alabiliriz.</li>
+                    <li>Önemli değişiklikler için makul bildirim sağlamaya çalışacağız.</li>
+                </ul>
+
+                <h2>10. Sorumluluk Sınırlaması</h2>
+                <p>Yasaların izin verdiği azami ölçüde:</p>
+                <ul>
+                    <li>Uygulama "olduğu gibi" sunulmaktadır.</li>
+                    <li>Uygulamanın kesintisiz veya hatasız çalışacağını garanti etmiyoruz.</li>
+                    <li>Uygulama kullanımından kaynaklanan dolaylı, arızi veya sonuç olarak ortaya çıkan zararlardan sorumlu değiliz.</li>
+                    <li>Toplam sorumluluğumuz, varsa, ödediğiniz ücretlerle sınırlıdır.</li>
+                </ul>
+
+                <h2>11. Hesap Sonlandırma</h2>
+                <ul>
+                    <li>Hesabınızı istediğiniz zaman sonlandırma talebinde bulunabilirsiniz.</li>
+                    <li>Bu koşulları ihlal etmeniz halinde hesabınızı askıya alabilir veya sonlandırabiliriz.</li>
+                    <li>Hesap sonlandırıldığında, <a href="privacy-policy.html">Gizlilik Politikamızda</a> belirtilen şekilde verileriniz işlenecektir.</li>
+                </ul>
+
+                <h2>12. Uyuşmazlık Çözümü</h2>
+                <ul>
+                    <li>Bu koşullar Türkiye Cumhuriyeti yasalarına tabidir.</li>
+                    <li>Uyuşmazlıklar için öncelikle dostane çözüm yolları aranacaktır.</li>
+                    <li>Çözülemeyen uyuşmazlıklarda Türkiye mahkemeleri yetkilidir.</li>
+                </ul>
+
+                <h2>13. Koşul Değişiklikleri</h2>
+                <ul>
+                    <li>Bu koşulları zaman zaman güncelleyebiliriz.</li>
+                    <li>Değişiklikler uygulama içinde yayınlanacaktır.</li>
+                    <li>Önemli değişikliklerde bildirim gönderilecektir.</li>
+                    <li>Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</li>
+                </ul>
+
+                <h2>14. Bölünebilirlik</h2>
+                <p>Bu koşulların herhangi bir hükmünün geçersiz veya uygulanamaz bulunması halinde, diğer hükümler yürürlükte kalmaya devam edecektir.</p>
+
+                <h2>15. İletişim</h2>
+                <p>Bu Kullanım Koşulları hakkında sorularınız için:</p>
+                
+                <div class="contact-box">
+                    <strong>Diyetisyen Nilay Göktepe Yılmaz</strong>
+                    <p>📧 E-posta: <a href="mailto:dytnilaygoktepe@gmail.com">dytnilaygoktepe@gmail.com</a></p>
+                    <p>📱 Telefon: <a href="tel:+905332844333">0533 284 43 33</a></p>
+                    <p>📍 Adres: Cubes Plaza, B Blok No:208, Çukurambar, Öğretmenler Cd. No:6, 06510 Çankaya/Ankara</p>
+                </div>
+
+                <p style="margin-top: 32px; text-align: center; color: var(--color-text-muted); font-style: italic;">
+                    Bu Kullanım Koşullarını kabul ederek, yukarıdaki tüm maddeleri okuduğunuzu ve anladığınızı beyan etmiş olursunuz.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Diyetisyen Nilay Göktepe Yılmaz. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
+
